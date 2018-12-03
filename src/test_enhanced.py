@@ -17,21 +17,26 @@ def test_rnd_99():
     '''
 
     rnd.seed()
-    # Generate number of values
-    nvalues = rnd.randrange(51)
-    # Generate list of non-negative random numbers less thann 99
-    values = rnd.sample(range(99), nvalues)
-    # Calculate expected mean
-    exp = sum(values) / nvalues
-    # Add terminating 99
-    values.append(99)
-    # Add some fluff after 99
-    fluff = rnd.sample(range(100), nvalues)
-    values.append( fluff )
-    # Disperse some (fewer than 11) negative numbers [-10:0)
-    for x in range( rnd.randrange(1,11) ):
-        insert_value = rnd.randrange(-10,0)
-        insert_pos = rnd.randrange( len(values) )
-        values.insert( insert_pos, insert_value )
 
-    assert rf.rfmean(values) == exp
+    # Conduction 50 tests of:
+
+    for itest in range(50):
+
+        # Generate number of values
+        nvalues = rnd.randrange(51)
+        # Generate list of non-negative random numbers less thann 99
+        values = rnd.sample(range(99), nvalues)
+        # Calculate expected mean
+        exp = sum(values) / nvalues
+        # Add terminating 99
+        values.append(99)
+        # Add some fluff after 99
+        fluff = rnd.sample(range(100), nvalues)
+        values.append( fluff )
+        # Disperse some (fewer than 11) negative numbers [-10:0)
+        for x in range( rnd.randrange(1,11) ):
+            insert_value = rnd.randrange(-10,0)
+            insert_pos = rnd.randrange( len(values) )
+            values.insert( insert_pos, insert_value )
+
+        assert rf.rfmean(values) == exp
