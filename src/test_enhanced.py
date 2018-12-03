@@ -29,9 +29,9 @@ def test_rnd_99():
     fluff = rnd.sample(range(100), nvalues)
     values.append( fluff )
     # Disperse some (fewer than 11) negative numbers [-10:0)
-    for x in range(1,11):
+    for x in rnd.randrange(1,11):
         insert_value = rnd.randrange(-10,0)
         insert_pos = rnd.randrange( len(values) )
-        values.inset( insert_pos, insert_values )
+        values.insert( insert_pos, insert_values )
 
     assert rf.rfmean(values) == exp
