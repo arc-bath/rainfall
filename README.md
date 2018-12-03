@@ -10,6 +10,10 @@ The repository contains exercises based around the classic rainfall problem, to 
 
 The repository consists of a set of tests `test_*.py` and prototype functions `rainfall.py`.  The students aim to write functions to satisfy the tests.
 
-Developments of the exercise read in values from a datafile, and extend the mean to calculate standard deviation, concurrently and separately.
+Continuations of the exercise generalise to user defined `STOP` value and correct and add new test in `test_enhanced.py`.
+
+#Future
+
+Developments of the exercise could read in values from a datafile, and extend the mean to calculate standard deviation, concurrently and separately.
 
 More detailed instructions about this exercise are available in the [Now Code lesson](https://arc-bath.github.io/now-code/01-rainfall.html).
