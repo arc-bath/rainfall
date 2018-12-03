@@ -1,5 +1,6 @@
 import rainfall as rf
 import random as rnd
+from numpy.testing import assert_almost_equal
 
 def test_rnd_99():
     '''
@@ -27,7 +28,7 @@ def test_rnd_99():
         # Generate list of non-negative random numbers less thann 99
         values = rnd.sample(range(99), nvalues)
         # Calculate expected mean
-        exp = sum(values) / nvalues
+        expect = sum(values) / nvalues
         # Add terminating 99
         values.append(99)
         # Add some fluff after 99
@@ -39,4 +40,4 @@ def test_rnd_99():
             insert_pos = rnd.randrange( len(values) )
             values.insert( insert_pos, insert_value )
 
-        assert rf.rfmean(values) == exp
+        assert_almost_equal( rf.rfmean(values), expect)

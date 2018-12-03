@@ -122,7 +122,7 @@ def test_rf_empty():
     expect = "Empty list"
     observ = rf.rfmean( test_list )
 
-    assert_almost_equal( observ, expect )
+    assert observ == expect 
     
 def test_rf_99_start():
     '''
@@ -133,7 +133,7 @@ def test_rf_99_start():
     expect = "First value 99"
     observ = rf.rfmean( test_list )
 
-    assert_almost_equal( observ, expect )
+    assert observ == expect 
     
 def test_rf_negative_99_start_1():
     '''
@@ -144,7 +144,7 @@ def test_rf_negative_99_start_1():
     expect = "No valid data points"
     observ = rf.rfmean( test_list )
 
-    assert_almost_equal( observ, expect )
+    assert observ == expect 
     
 def test_rf_negative_99_start_2():
     '''
@@ -155,4 +155,4 @@ def test_rf_negative_99_start_2():
     expect = "No valid data points"
     observ = rf.rfmean( test_list )
 
-    assert_almost_equal( observ, expect )
+    assert observ == expect 
