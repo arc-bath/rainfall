@@ -25,15 +25,24 @@ def test_rnd_99():
 
         # Generate number of values
         nvalues = rnd.randrange(51)
+
         # Generate list of non-negative random numbers less thann 99
-        values = rnd.sample(range(99), nvalues)
+        values = []
+        for ivalue in range(nvalues):
+            values.append( rnd.randrange(99) )
+
         # Calculate expected mean
         expect = sum(values) / nvalues
+
         # Add terminating 99
         values.append(99)
+
         # Add some fluff after 99
-        fluff = rnd.sample(range(50), nvalues)
-        values.append( fluff )
+        fluff = []
+        for ivalue in range(50):
+            fluff.append( rnd.randrange(100) )
+        values.extend( fluff )
+
         # Disperse some (fewer than 11) negative numbers [-10:0)
         for x in range( rnd.randrange(1,11) ):
             insert_value = rnd.randrange(-10,0)
