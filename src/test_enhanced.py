@@ -31,7 +31,7 @@ def test_rnd_99():
         # Add terminating 99
         values.append(99)
         # Add some fluff after 99
-        fluff = rnd.sample(range(100), nvalues)
+        fluff = rnd.sample(range(50), nvalues)
         values.append( fluff )
         # Disperse some (fewer than 11) negative numbers [-10:0)
         for x in range( rnd.randrange(1,11) ):
