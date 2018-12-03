@@ -32,6 +32,6 @@ def test_rnd_99():
     for x in range( rnd.randrange(1,11) ):
         insert_value = rnd.randrange(-10,0)
         insert_pos = rnd.randrange( len(values) )
-        values.insert( insert_pos, insert_values )
+        values.insert( insert_pos, insert_value )
 
     assert rf.rfmean(values) == exp
