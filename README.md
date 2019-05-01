@@ -12,7 +12,7 @@ The repository consists of a set of tests `test_*.py` and prototype functions `r
 
 Continuations of the exercise generalise to user defined `STOP` value and correct and add new test in `test_enhanced.py`.
 
-[![Azure Notebooks](https://notebooks.azure.com/launch.png)](https://notebooks.azure.com/import/gh/<GitHub_username>/<repository_name>)
+[![Azure Notebooks](https://notebooks.azure.com/launch.png)](https://notebooks.azure.com/import/gh/arc-bath/rainfall)
 
 # Future
 
