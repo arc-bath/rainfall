@@ -12,7 +12,9 @@ The repository consists of a set of tests `test_*.py` and prototype functions `r
 
 Continuations of the exercise generalise to user defined `STOP` value and correct and add new test in `test_enhanced.py`.
 
-#Future
+[![Azure Notebooks](https://notebooks.azure.com/launch.png)](https://notebooks.azure.com/import/gh/<GitHub_username>/<repository_name>)
+
+# Future
 
 Developments of the exercise could read in values from a datafile, and extend the mean to calculate standard deviation, concurrently and separately.
 
